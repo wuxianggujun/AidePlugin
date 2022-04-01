@@ -8,7 +8,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class ProxyActivity extends AppCompatActivity {
+public class ProxyActivity extends Activity {
 
     LifeCircleController mPluginController = new LifeCircleController(this);
 

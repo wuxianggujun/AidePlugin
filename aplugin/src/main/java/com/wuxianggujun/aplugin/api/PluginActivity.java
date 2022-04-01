@@ -18,12 +18,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.lang.reflect.Field;
 
-public abstract class PluginActivity extends AppCompatActivity implements Pluginable, Attachable<Activity> {
+public abstract class PluginActivity extends Activity implements Pluginable, Attachable<Activity> {
     public static final String TAG = PluginActivity.class.getSimpleName();
     protected Activity mProxyActivity;
     private Resources mResources;
     PluginApk mPluginApk;
-    protected Context mContext;
+    //protected Context mContext;
 
     @Override
     public void attach(Activity proxy, PluginApk apk) {
