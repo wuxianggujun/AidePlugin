@@ -34,18 +34,6 @@ public class LifeCircleController implements Pluginable {
             mPlugin.attach(mProxy, mPluginApk);
             mResources = mPluginApk.pluginResources;
             mPlugin.onCreate(bundle);
-//            Resources resources = mResources;
-//             mContext = new ContextThemeWrapper(getBaseContext(), 0);
-//            Class<? extends Context> clazz = mProxy.getClass();
-//
-//            try {
-//                Field mResourceField = clazz.getDeclaredField("mResources");
-//                mResourceField.setAccessible(true);
-//                mResourceField.set(mProxy, resources);
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-
         } catch (Exception e) {
             VLog.log("Fail in LifeCircleController onCreate");
             VLog.log(e.getMessage());

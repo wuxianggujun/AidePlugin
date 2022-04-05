@@ -6,17 +6,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.lang.reflect.Field;
 
 public abstract class PluginActivity extends Activity implements Pluginable, Attachable<Activity> {
     public static final String TAG = PluginActivity.class.getSimpleName();
