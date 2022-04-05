@@ -5,8 +5,6 @@ import android.content.res.Resources;
 
 import com.wuxianggujun.aplugin.api.classloader.PluginDexClassLoader;
 
-import dalvik.system.DexClassLoader;
-
 public class PluginApk {
     public PackageInfo packageInfo;
     public PluginDexClassLoader classLoader;

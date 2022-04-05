@@ -1,7 +1,6 @@
 package com.wuxianggujun.aplugin.api;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -9,9 +8,6 @@ import android.os.Bundle;
 import com.wuxianggujun.aplugin.api.classloader.PluginDexClassLoader;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-
-import dalvik.system.DexClassLoader;
 
 public class LifeCircleController implements Pluginable {
 

@@ -16,8 +16,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-
-import dalvik.system.DexClassLoader;
 /*双亲委派模型
         双亲委派模型是一种组织类加载器之间关系的一种规范，
         他的工作原理是：如果一个类加载器收到了类加载的请求，
