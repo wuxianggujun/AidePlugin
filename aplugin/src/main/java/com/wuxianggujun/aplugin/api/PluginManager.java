@@ -9,6 +9,8 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import com.wuxianggujun.aplugin.api.classloader.PluginDexClassLoader;
+
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -96,13 +98,13 @@ public class PluginManager {
         return pluginApk;
     }
 
-    private DexClassLoader createDexClassLoader(String apkPath) {
+    private PluginDexClassLoader createDexClassLoader(String apkPath) {
         File dexOutputDir = mContext.getDir("dex", Context.MODE_PRIVATE);
        /* dexPath	包含dex文件的jar包或apk文件路径
         optimizedDirectory	释放目录，可以理解为缓存目录，必须为应用私有目录，不能为空
         librarySearchPath	native库的路径（so文件），可为空
         parent	父类加载器*/
-        DexClassLoader loader = new DexClassLoader(apkPath, dexOutputDir.getAbsolutePath(),
+        PluginDexClassLoader loader = new PluginDexClassLoader(apkPath, dexOutputDir.getAbsolutePath(),
                 null, mContext.getClassLoader());
         return loader;
     }

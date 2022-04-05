@@ -3,11 +3,13 @@ package com.wuxianggujun.aplugin.api;
 import android.content.pm.PackageInfo;
 import android.content.res.Resources;
 
+import com.wuxianggujun.aplugin.api.classloader.PluginDexClassLoader;
+
 import dalvik.system.DexClassLoader;
 
 public class PluginApk {
     public PackageInfo packageInfo;
-    public DexClassLoader classLoader;
+    public PluginDexClassLoader classLoader;
     public Resources pluginResources;
 
 

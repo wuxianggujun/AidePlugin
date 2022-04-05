@@ -6,6 +6,8 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 
+import com.wuxianggujun.aplugin.api.classloader.PluginDexClassLoader;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
@@ -41,7 +43,7 @@ public class LifeCircleController implements Pluginable {
         }
     }
 
-    private Object loadPluginable(DexClassLoader classLoader, String mPluginClazz) throws Exception {
+    private Object loadPluginable(PluginDexClassLoader classLoader, String mPluginClazz) throws Exception {
         Class<?> pluginClz = classLoader.loadClass(mPluginClazz);
         Constructor<?> constructor = pluginClz.getConstructor(new Class[]{});
         constructor.setAccessible(true);
